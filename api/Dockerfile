@@ -5,7 +5,7 @@ CMD ["bash"]
 FROM base AS test-and-build
 COPY . /workspace
 WORKDIR /workspace
-RUN ./gradlew build
+RUN gradlew build
 
 # production
 FROM amazoncorretto:17 AS production
